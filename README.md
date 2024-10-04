@@ -1,0 +1,1 @@
+- Fix file [ContextMenu](./src/components/File/FileContextMenu.tsx) to display red styles with animations, without simply overriding it with a new class.

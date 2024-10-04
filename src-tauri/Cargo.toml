@@ -1,0 +1,31 @@
+[package]
+name = "flux-io"
+version = "0.1.0"
+edition = "2021"
+
+description = "A Tauri App"
+authors = ["boul2gom <contact@boul2gom.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "flux_io_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0", features = [] }
+tauri-plugin-shell = "2.0.0"
+
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+tracing = "0.1.40"
+derive-new = "0.7.0"
+
+rspc_tauri2 = { git = "https://github.com/boul2gom/specta-tauri-v2", features = ["tracing"] }
+tokio = { version = "1.40.0", features = ["full"] }
+specta = "2.0.0-rc.20"
+rspc = "0.2.0"
+
